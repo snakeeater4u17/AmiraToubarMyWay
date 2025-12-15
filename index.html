@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page-title">شركة أميرة طوبار - منتجات عطور ومنظفات والعناية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" data-i18n="logo">أميرة طوبار</div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-i18n="nav-home">الرئيسية</a></li>
+                <li><a href="#products" data-i18n="nav-products">المنتجات</a></li>
+                <li><a href="#about" data-i18n="nav-about">من نحن</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">اتصل بنا</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ar">العربية</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Video Section -->
+    <section id="home" class="hero-section">
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero-title">أميرة طوبار</h1>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">جودة استثنائية في كل منتج</p>
+            <a href="#products" class="cta-button" data-i18n="hero-cta">اكتشف منتجاتنا</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="products-title">منتجاتنا</h2>
+            
+            <!-- Perfumes -->
+            <div class="product-category" data-category="perfumes">
+                <div class="product-info">
+                    <h3 data-i18n="perfumes-title">عطور فاخرة</h3>
+                    <p data-i18n="perfumes-desc">مجموعة مميزة من العطور الفاخرة التي تعكس أناقتك وتميزك</p>
+                    <a href="#contact" class="product-link" data-i18n="order-now">اطلب الآن</a>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-grid" id="gallery-perfumes">
+                        <!-- Images will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detergents -->
+            <div class="product-category reverse" data-category="detergents">
+                <div class="product-info">
+                    <h3 data-i18n="detergents-title">منظفات عالية الجودة</h3>
+                    <p data-i18n="detergents-desc">منظفات فعالة وآمنة لجميع احتياجات التنظيف اليومية</p>
+                    <a href="#contact" class="product-link" data-i18n="order-now">اطلب الآن</a>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-grid" id="gallery-detergents">
+                        <!-- Images will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blenders -->
+            <div class="product-category" data-category="blenders">
+                <div class="product-info">
+                    <h3 data-i18n="blenders-title">خلاطات طعام احترافية</h3>
+                    <p data-i18n="blenders-desc">خلاطات قوية ومتعددة الاستخدامات لتحضير أطباق صحية ولذيذة</p>
+                    <a href="#contact" class="product-link" data-i18n="order-now">اطلب الآن</a>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-grid" id="gallery-blenders">
+                        <!-- Images will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skincare -->
+            <div class="product-category reverse" data-category="skincare">
+                <div class="product-info">
+                    <h3 data-i18n="skincare-title">العناية بالبشرة والجسم</h3>
+                    <p data-i18n="skincare-desc">منتجات طبيعية للعناية بالبشرة والجسم للحصول على إشراقة صحية</p>
+                    <a href="#contact" class="product-link" data-i18n="order-now">اطلب الآن</a>
+                </div>
+                <div class="gallery-container">
+                    <div class="gallery-grid" id="gallery-skincare">
+                        <!-- Images will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about-title">من نحن</h2>
+            <div class="about-content">
+                <p class="about-text" data-i18n="about-text1">
+                    شركة أميرة طوبار هي شركة رائدة في مجال توزيع وتسويق المنتجات عالية الجودة. 
+                    نقدم مجموعة واسعة من العطور الفاخرة، المنظفات الفعالة، خلاطات الطعام الاحترافية، 
+                    ومنتجات العناية بالبشرة والجسم.
+                </p>
+                <p class="about-text" data-i18n="about-text2">
+                    نسعى دائماً لتقديم أفضل المنتجات وأعلى معايير الجودة لعملائنا الكرام، 
+                    مع ضمان خدمة عملاء متميزة وتوصيل سريع وآمن.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact-title">اتصل بنا</h2>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" data-i18n-placeholder="form-name" placeholder="الاسم" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" data-i18n-placeholder="form-email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" data-i18n-placeholder="form-phone" placeholder="رقم الهاتف" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" data-i18n-placeholder="form-message" placeholder="رسالتك" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-i18n="form-submit">إرسال</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <a href="mailto:Amiratoubar@gmail.com">Amiratoubar@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <a href="https://wa.me/201002160702" target="_blank" class="whatsapp-link">
+                            <span data-i18n="whatsapp">واتساب</span>: +20 10 02160702
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📘</div>
+                        <a href="https://www.facebook.com/share/1ATt2HG9p6/" target="_blank" data-i18n="facebook">فيسبوك</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✈️</div>
+                        <a href="https://t.me/mywayandavon" target="_blank" data-i18n="telegram">تيليجرام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="logo">أميرة طوبار</h4>
+                    <p data-i18n="footer-tagline">جودة استثنائية في كل منتج</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer-quick-links">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav-home">الرئيسية</a></li>
+                        <li><a href="#products" data-i18n="nav-products">المنتجات</a></li>
+                        <li><a href="#about" data-i18n="nav-about">من نحن</a></li>
+                        <li><a href="#contact" data-i18n="nav-contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer-contact">تواصل معنا</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ATt2HG9p6/" target="_blank" class="social-link" data-i18n="facebook">فيسبوك</a>
+                        <a href="https://t.me/mywayandavon" target="_blank" class="social-link" data-i18n="telegram">تيليجرام</a>
+                        <a href="https://wa.me/201002160702" target="_blank" class="social-link whatsapp" data-i18n="whatsapp">واتساب</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer-copyright">&copy; 2024 شركة أميرة طوبار. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201002160702" target="_blank" class="whatsapp-float">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.829.744 5.49 2.045 7.8L0 32l8.4-2.045C10.71 32.256 13.371 33 16 33c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 30.182c-2.327 0-4.509-.618-6.4-1.691l-.455-.273-4.727 1.145 1.145-4.727-.273-.455C4.436 22.509 3.818 20.327 3.818 18c0-7.782 6.4-14.182 14.182-14.182S32 10.218 32 18c0 7.782-6.4 14.182-14.182 14.182z"/>
+            <path d="M24.218 19.782c-.291-.145-1.745-.873-2.036-.973-.291-.109-.509-.145-.727.145-.218.291-.873 1.018-1.073 1.236-.2.218-.4.255-.727.073-.327-.182-1.382-.509-2.636-1.618-.975-.873-1.636-1.945-1.818-2.273-.182-.327-.018-.509.136-.673.145-.145.327-.382.491-.582.164-.2.218-.327.327-.545.109-.218.055-.409-.018-.582-.073-.182-.655-1.582-.9-2.164-.236-.582-.491-.509-.655-.527-.164-.018-.355-.018-.545-.018-.191 0-.5.073-.764.364-.264.291-1.018.991-1.018 2.418 0 1.427 1.036 2.8 1.182 2.982.145.182 2.036 3.109 4.927 4.364.691.309 1.236.491 1.655.627.7.236 1.336.2 1.836.122.564-.082 1.745-.709 1.982-1.4.236-.691.236-1.282.164-1.4-.073-.109-.255-.182-.545-.291z"/>
+        </svg>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#8249;</span>
+        <span class="lightbox-next">&#8250;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
