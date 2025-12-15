@@ -1,13 +1,13 @@
 // Language Translation System
 const translations = {
     ar: {
-        'page-title': 'شركة أميرة طوبار - منتجات عطور ومنظفات والعناية',
-        'logo': 'أميرة طوبار',
+        'page-title': 'شركة ماي واي أميرة طوبار - منتجات عطور ومنظفات والعناية',
+        'logo': 'ماي واي أميرة طوبار',
         'nav-home': 'الرئيسية',
         'nav-products': 'المنتجات',
         'nav-about': 'من نحن',
         'nav-contact': 'اتصل بنا',
-        'hero-title': 'أميرة طوبار',
+        'hero-title': 'ماي واي أميرة طوبار',
         'hero-subtitle': 'جودة استثنائية في كل منتج',
         'hero-cta': 'اكتشف منتجاتنا',
         'products-title': 'منتجاتنا',
@@ -21,7 +21,7 @@ const translations = {
         'skincare-desc': 'منتجات طبيعية للعناية بالبشرة والجسم للحصول على إشراقة صحية',
         'order-now': 'اطلب الآن',
         'about-title': 'من نحن',
-        'about-text1': 'شركة أميرة طوبار هي شركة رائدة في مجال توزيع وتسويق المنتجات عالية الجودة. نقدم مجموعة واسعة من العطور الفاخرة، المنظفات الفعالة، خلاطات الطعام الاحترافية، ومنتجات العناية بالبشرة والجسم.',
+        'about-text1': 'شركة ماي واي أميرة طوبار هي شركة رائدة في مجال توزيع وتسويق المنتجات عالية الجودة. نقدم مجموعة واسعة من العطور الفاخرة، المنظفات الفعالة، خلاطات الطعام الاحترافية، ومنتجات العناية بالبشرة والجسم.',
         'about-text2': 'نسعى دائماً لتقديم أفضل المنتجات وأعلى معايير الجودة لعملائنا الكرام، مع ضمان خدمة عملاء متميزة وتوصيل سريع وآمن.',
         'contact-title': 'اتصل بنا',
         'form-name': 'الاسم',
@@ -35,17 +35,17 @@ const translations = {
         'footer-tagline': 'جودة استثنائية في كل منتج',
         'footer-quick-links': 'روابط سريعة',
         'footer-contact': 'تواصل معنا',
-        'footer-copyright': '© 2024 شركة أميرة طوبار. جميع الحقوق محفوظة.',
+        'footer-copyright': '© 2024 شركة ماي واي أميرة طوبار. جميع الحقوق محفوظة.',
         'form-success': 'تم إرسال الرسالة بنجاح! سيتم فتح بريدك الإلكتروني.'
     },
     en: {
-        'page-title': 'Amira Toubar Company - Perfumes, Detergents & Care Products',
-        'logo': 'Amira Toubar',
+        'page-title': 'My Way Amira Toubar Company - Perfumes, Detergents & Care Products',
+        'logo': 'My Way Amira Toubar',
         'nav-home': 'Home',
         'nav-products': 'Products',
         'nav-about': 'About Us',
         'nav-contact': 'Contact Us',
-        'hero-title': 'Amira Toubar',
+        'hero-title': 'My Way Amira Toubar',
         'hero-subtitle': 'Exceptional Quality in Every Product',
         'hero-cta': 'Discover Our Products',
         'products-title': 'Our Products',
@@ -59,7 +59,7 @@ const translations = {
         'skincare-desc': 'Natural products for skincare and body care to achieve a healthy glow',
         'order-now': 'Order Now',
         'about-title': 'About Us',
-        'about-text1': 'Amira Toubar Company is a leading company in the field of distribution and marketing of high-quality products. We offer a wide range of luxury perfumes, effective detergents, professional food blenders, and skincare and body care products.',
+        'about-text1': 'My Way Amira Toubar Company is a leading company in the field of distribution and marketing of high-quality products. We offer a wide range of luxury perfumes, effective detergents, professional food blenders, and skincare and body care products.',
         'about-text2': 'We always strive to provide the best products and highest quality standards for our valued customers, with guaranteed excellent customer service and fast, secure delivery.',
         'contact-title': 'Contact Us',
         'form-name': 'Name',
@@ -73,7 +73,7 @@ const translations = {
         'footer-tagline': 'Exceptional Quality in Every Product',
         'footer-quick-links': 'Quick Links',
         'footer-contact': 'Contact Us',
-        'footer-copyright': '© 2024 Amira Toubar Company. All rights reserved.',
+        'footer-copyright': '© 2024 My Way Amira Toubar Company. All rights reserved.',
         'form-success': 'Message sent successfully! Your email client will open.'
     }
 };
@@ -142,52 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Initialize gallery and lightbox
+    // Initialize gallery
     loadGalleryImages();
-    
-    const lightbox = document.getElementById('lightbox');
-    const lightboxClose = document.querySelector('.lightbox-close');
-    const lightboxNext = document.querySelector('.lightbox-next');
-    const lightboxPrev = document.querySelector('.lightbox-prev');
-    
-    if (lightboxClose) {
-        lightboxClose.addEventListener('click', closeLightbox);
-    }
-    
-    if (lightboxNext) {
-        lightboxNext.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showNextImage();
-        });
-    }
-    
-    if (lightboxPrev) {
-        lightboxPrev.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showPrevImage();
-        });
-    }
-    
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-    }
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (lightbox && lightbox.classList.contains('active')) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            } else if (e.key === 'ArrowRight') {
-                showNextImage();
-            } else if (e.key === 'ArrowLeft') {
-                showPrevImage();
-            }
-        }
-    });
 });
 
 // Navigation Scroll Effect
@@ -265,7 +221,7 @@ contactForm.addEventListener('submit', async (e) => {
     };
 
     // Create mailto link
-    const subjectText = currentLang === 'ar' ? 'رسالة من موقع أميرة طوبار' : 'Message from Amira Toubar Website';
+    const subjectText = currentLang === 'ar' ? 'رسالة من موقع ماي واي أميرة طوبار' : 'Message from My Way Amira Toubar Website';
     const nameLabel = currentLang === 'ar' ? 'الاسم' : 'Name';
     const emailLabel = currentLang === 'ar' ? 'البريد الإلكتروني' : 'Email';
     const phoneLabel = currentLang === 'ar' ? 'رقم الهاتف' : 'Phone';
@@ -571,7 +527,23 @@ function loadGalleryImages() {
                 this.style.display = 'none';
             });
             
-            img.addEventListener('click', () => openLightbox(images, index, category));
+            // Make image clickable - open in new window/page on single click
+            img.style.cursor = 'pointer';
+            img.setAttribute('title', currentLang === 'ar' ? 'انقر لفتح الصورة' : 'Click to open image');
+            
+            // Open image in new window/page on click
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openImageInNewPage(imageFile);
+            });
+            
+            // Also make container clickable
+            imgContainer.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openImageInNewPage(imageFile);
+            });
             
             imgContainer.appendChild(img);
             gallery.appendChild(imgContainer);
@@ -579,38 +551,125 @@ function loadGalleryImages() {
     });
 }
 
-// Lightbox functionality
-let currentImages = [];
-let currentIndex = 0;
-let currentCategory = '';
-
-function openLightbox(images, index, category) {
-    currentImages = images;
-    currentIndex = index;
-    currentCategory = category;
+// Open image in new page/window
+function openImageInNewPage(imageSrc) {
+    // Create a new window with the image
+    const newWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
     
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    // Create HTML content for the new page
+    const htmlContent = `
+        <!DOCTYPE html>
+        <html lang="${currentLang}" dir="${currentLang === 'ar' ? 'rtl' : 'ltr'}">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>${currentLang === 'ar' ? 'ماي واي أميرة طوبار - عرض الصورة' : 'My Way Amira Toubar - View Image'}</title>
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                body {
+                    background: #0d1b2a;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 100vh;
+                    padding: 20px;
+                    font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                }
+                .image-container {
+                    max-width: 100%;
+                    max-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                }
+                .image-container img {
+                    max-width: 100%;
+                    max-height: 95vh;
+                    width: auto;
+                    height: auto;
+                    object-fit: contain;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.5);
+                    animation: fadeIn 0.5s ease;
+                }
+                .close-btn {
+                    position: fixed;
+                    top: 20px;
+                    ${currentLang === 'ar' ? 'left' : 'right'}: 20px;
+                    background: rgba(255, 255, 255, 0.2);
+                    color: white;
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    font-size: 30px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease;
+                    z-index: 1000;
+                    backdrop-filter: blur(10px);
+                }
+                .close-btn:hover {
+                    background: rgba(255, 255, 255, 0.3);
+                    transform: scale(1.1);
+                }
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.9);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+                @media (max-width: 768px) {
+                    .image-container img {
+                        max-height: 90vh;
+                    }
+                    .close-btn {
+                        top: 10px;
+                        ${currentLang === 'ar' ? 'left' : 'right'}: 10px;
+                        width: 40px;
+                        height: 40px;
+                        font-size: 24px;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <button class="close-btn" onclick="window.close()">&times;</button>
+            <div class="image-container">
+                <img src="${imageSrc}" alt="${currentLang === 'ar' ? 'صورة المنتج' : 'Product Image'}" />
+            </div>
+            <script>
+                // Close on Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        window.close();
+                    }
+                });
+                
+                // Close on click outside image
+                document.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'IMG' && e.target.className !== 'close-btn') {
+                        window.close();
+                    }
+                });
+            </script>
+        </body>
+        </html>
+    `;
     
-    lightboxImg.src = images[index];
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-function showNextImage() {
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    document.getElementById('lightbox-img').src = currentImages[currentIndex];
-}
-
-function showPrevImage() {
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    document.getElementById('lightbox-img').src = currentImages[currentIndex];
+    newWindow.document.write(htmlContent);
+    newWindow.document.close();
 }
 
 
